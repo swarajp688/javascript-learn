@@ -10,4 +10,11 @@ const sum = function(a){
 }
 // es6
 // const add = a => b => b ? sum(a+b) : a;
+const curry = (fn) => {
+    return (a) => {
+        return (b) => {
+            return fn(a,b);
+        }
+    }
+}
 console.log(sum(1)(2)(3)());
